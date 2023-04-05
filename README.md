@@ -17,13 +17,9 @@ type validationRegisterFunctionType = {
 /*                                  Validity                                  */
 /* -------------------------------------------------------------------------- */
 export let validity = false
-
-/* -------------------------------------------------------------------------- */
-
 export let validationRegisterFunction: validationRegisterFunctionType = (amIValid) => {}
 export let validityChangesFunction: CallableFunction = () => {}
 
-/* -------------------------------------------------------------------------- */
 
 validationRegisterFunction(() => {return validity})
 $: ((validity) => {validityChangesFunction()})(validity)
@@ -34,12 +30,12 @@ $: ((validity) => {validityChangesFunction()})(validity)
 
 
 
-## Main App
+## App
 ```svelte
 /* -------------------------------------------------------------------------- */
 /*                                 Validation                                 */
 /* -------------------------------------------------------------------------- */
-let amIValidFunctions = []
+const amIValidFunctions = []
 
 let everythingIsValid = false
 function validityChangesFunction() {
