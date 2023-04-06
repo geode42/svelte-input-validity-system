@@ -64,9 +64,9 @@ function validationDisconnectFunction(amIValidFunction: () => boolean) {
 
 // Example usage: <COMPONENT {...validationProps} />
 const validationProps = {
-	validationConnectFunction: validationConnectFunction,
-	validationDisconnectFunction: validationDisconnectFunction,
-	validationUpdate: validationUpdate
+  validationConnectFunction: validationConnectFunction,
+  validationDisconnectFunction: validationDisconnectFunction,
+  validationUpdate: validationUpdate
 }
 /* -------------------------------------------------------------------------- */
 /*                               End validation                               */
